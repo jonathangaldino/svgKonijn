@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>svgKonijn</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="main.js" defer></script>
+  </head>
+  <body>
+    <aside id="controls">
+      <div class="actions">
+        <button id="open" class="primary">Open image…</button>
+        <input type="file" id="file" accept="image/*" hidden />
+      </div>
+      <fieldset class="mode">
+        <legend>Output</legend>
+        <label><input type="radio" name="mode" value="color" checked /> Color</label>
+        <label><input type="radio" name="mode" value="mono" /> Monochrome</label>
+      </fieldset>
+      <div id="groups"></div>
+      <div class="actions">
+        <button id="save" disabled>Save SVG</button>
+        <button id="copy" disabled>Copy SVG</button>
+      </div>
+    </aside>
+    <main id="stage">
+      <div id="view"></div>
+      <p id="hint">Open, drop, or paste an image</p>
+      <output id="status" aria-live="polite"></output>
+    </main>
+  </body>
+</html>
